@@ -319,7 +319,7 @@
         <div class="service-icon">📊</div>
         <div class="service-title">Business Performance Reports</div>
         <div class="service-desc">Send me your raw data and I'll return a clean, visual report with key insights and actionable recommendations — ready to present to stakeholders.</div>
-        <div class="service-price">From $100 · per report</div>
+
         <div class="service-tags">
           <span class="service-tag">Google Sheets</span><span class="service-tag">Excel</span><span class="service-tag">PDF Report</span>
         </div>
@@ -329,7 +329,7 @@
         <div class="service-icon">📋</div>
         <div class="service-title">Google Sheets & Excel Dashboards</div>
         <div class="service-desc">Custom spreadsheet dashboards with automated calculations, charts, and KPI tracking — built to be used by your team daily, no technical knowledge required.</div>
-        <div class="service-price">From $150 · per dashboard</div>
+
         <div class="service-tags">
           <span class="service-tag">Google Sheets</span><span class="service-tag">Excel</span><span class="service-tag">Automation</span>
         </div>
@@ -339,7 +339,7 @@
         <div class="service-icon">🚚</div>
         <div class="service-title">Logistics & Operations Analysis</div>
         <div class="service-desc">Carrier performance, route cost optimization, on-time delivery metrics. I've lived this data for years — I know what matters and what doesn't.</div>
-        <div class="service-price">From $50/hr · or fixed project</div>
+
         <div class="service-tags">
           <span class="service-tag">Logistics</span><span class="service-tag">Pricing</span><span class="service-tag">KPI Tracking</span>
         </div>
@@ -349,7 +349,7 @@
         <div class="service-icon">🔁</div>
         <div class="service-title">Monthly KPI Reporting</div>
         <div class="service-desc">A recurring service — you send me your monthly data, I deliver a polished report. Consistent visibility into your business without the overhead of a full-time analyst.</div>
-        <div class="service-price">From $200/month · recurring</div>
+
         <div class="service-tags">
           <span class="service-tag">Recurring</span><span class="service-tag">Reports</span><span class="service-tag">Insights</span>
         </div>
@@ -359,7 +359,7 @@
         <div class="service-icon">📉</div>
         <div class="service-title">Customer Retention Analysis</div>
         <div class="service-desc">Identify churn risk, track cancellation trends, and find revenue leakage. Built on real experience managing retention KPIs for client portfolios.</div>
-        <div class="service-price">From $200 · per project</div>
+
         <div class="service-tags">
           <span class="service-tag">Churn Analysis</span><span class="service-tag">CLV</span><span class="service-tag">Retention</span>
         </div>
@@ -369,7 +369,7 @@
         <div class="service-icon">🗄️</div>
         <div class="service-title">Data Cleaning & Structuring</div>
         <div class="service-desc">Transform inconsistent, messy spreadsheets into clean, structured datasets ready for analysis or import into any tool — a foundation for better decisions.</div>
-        <div class="service-price">From $80 · per dataset</div>
+
         <div class="service-tags">
           <span class="service-tag">SQL</span><span class="service-tag">Python</span><span class="service-tag">Excel</span>
         </div>
@@ -735,7 +735,7 @@
         Download CV (PDF)
       </a>
     </div>
-    <p class="resume-note">* Place your PDF named <em>Lucas_David_Valencia_CV.pdf</em> in the same folder as this HTML file to activate the download button.</p>
+
   </div>
 </section>
 
@@ -750,17 +750,19 @@
         <p class="contact-intro">Open to remote and international opportunities in Data Analysis and Business Development. Available for freelance projects. Feel free to reach out.</p>
         <ul class="contact-links">
           <li><span class="contact-link-label">Phone</span><a href="tel:+573124750716">+57 312 475 0716</a></li>
-          <li><span class="contact-link-label">Email</span><a href="mailto:lucasdavidvalencia92@gmail.com">lucasdavidvalencia92@gmail.com</a></li>
+          <li><span class="contact-link-label">Email</span><a href="/cdn-cgi/l/email-protection#5c30293f3d2f383d2a35382a3d3039323f353d656e1c3b313d3530723f3331"><span class="__cf_email__" data-cfemail="066a736567756267706f6270676a6368656f673f3446616b676f6a2865696b">[email&#160;protected]</span></a></li>
           <li><span class="contact-link-label">LinkedIn</span><a href="https://www.linkedin.com/in/lucasdavidv/" target="_blank" rel="noopener">linkedin.com/in/lucasdavidv</a></li>
           <li><span class="contact-link-label">Location</span><a href="#">Colombia · Remote</a></li>
         </ul>
       </div>
       <div class="reveal-right">
-        <form class="contact-form" onsubmit="return false;">
-          <div class="form-group"><label class="form-label" for="cname">Name</label><input class="form-input" id="cname" type="text" placeholder="Your name"/></div>
-          <div class="form-group"><label class="form-label" for="cemail">Email</label><input class="form-input" id="cemail" type="email" placeholder="your@email.com"/></div>
-          <div class="form-group"><label class="form-label" for="cmsg">Message</label><textarea class="form-textarea" id="cmsg" placeholder="What's on your mind?"></textarea></div>
-          <button class="form-btn" type="submit">Send Message</button>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xeepbelq" method="POST">
+          <div class="form-group"><label class="form-label" for="cname">Name</label><input class="form-input" id="cname" name="name" type="text" placeholder="Your name" required/></div>
+          <div class="form-group"><label class="form-label" for="cemail">Email</label><input class="form-input" id="cemail" name="email" type="email" placeholder="your@email.com" required/></div>
+          <div class="form-group"><label class="form-label" for="cmsg">Message</label><textarea class="form-textarea" id="cmsg" name="message" placeholder="What's on your mind?" required></textarea></div>
+          <button class="form-btn" type="submit" id="form-submit-btn">Send Message</button>
+          <p id="form-success" style="display:none;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--olive);margin-top:1rem;">✓ Message sent! I'll get back to you soon.</p>
+          <p id="form-error" style="display:none;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:#c0504a;margin-top:1rem;">Something went wrong. Please email me directly.</p>
         </form>
       </div>
     </div>
@@ -772,7 +774,7 @@
 </footer>
 
 <!-- CODE RAIN -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   const canvas = document.getElementById('code-canvas');
   const ctx = canvas.getContext('2d');
@@ -828,6 +830,43 @@
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger').forEach(el=>obs.observe(el));
   const nav=document.getElementById('navbar');
   window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50),{passive:true});
+})();
+</script>
+
+<!-- CONTACT FORM HANDLER -->
+<script>
+(function(){
+  const form = document.getElementById('contact-form');
+  if(!form) return;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const btn = document.getElementById('form-submit-btn');
+    const success = document.getElementById('form-success');
+    const error = document.getElementById('form-error');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    success.style.display = 'none';
+    error.style.display = 'none';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok){
+        success.style.display = 'block';
+        form.reset();
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      } else {
+        throw new Error('Server error');
+      }
+    } catch(err){
+      error.style.display = 'block';
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+    }
+  });
 })();
 </script>
 
